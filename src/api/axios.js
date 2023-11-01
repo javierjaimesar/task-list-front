@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://task-list-back.onrender.com/api',
+    baseURL: 'https://task-list-back-vrsq.onrender.com',
     withCredentials: true
 })
 
