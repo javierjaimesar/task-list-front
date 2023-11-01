@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background: rgb(24 24 27);
+  font-family: system-ui;
+  height: 100vh;
+}
