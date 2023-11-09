@@ -12,13 +12,11 @@ function App() {
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
-          <Routes>
-            <Route path="/login" render={() => <LoginPage />} />
-            <Route path="/register" render={() => <RegisterPage />} />
-            <Route element={<ProtectedRoute />}>
-              <Route path="/" render={() => <TaskPage />} />
-            </Route>
-          </Routes>
+          <Route path="/login" render={() => <LoginPage />} />
+          <Route path="/register" render={() => <RegisterPage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/" render={() => <TaskPage />} />
+          </Route>
         </BrowserRouter>
       </TaskProvider>
     </AuthProvider>
