@@ -13,10 +13,10 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" render={() => <LoginPage />} />
+            <Route path="/register" render={() => <RegisterPage />} />
             <Route element={<ProtectedRoute />}>
-              <Route path="/" element={<TaskPage />} />
+              <Route path="/" render={() => <TaskPage />} />
             </Route>
           </Routes>
         </BrowserRouter>
