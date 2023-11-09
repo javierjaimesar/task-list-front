@@ -11,11 +11,15 @@ function App() {
   return (
     <AuthProvider>
       <TaskProvider>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<TaskPage />} />
-        </Route>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/" element={<TaskPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </TaskProvider>
     </AuthProvider>
   );
