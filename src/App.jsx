@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { TaskProvider } from "./context/TaskContext";
 
@@ -11,10 +11,10 @@ function App() {
   return (
     <AuthProvider>
       <TaskProvider>
-        <Route exact path="/login" element={<LoginPage />} />
-        <Route exact path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route element={<ProtectedRoute />}>
-          <Route exact path="/" element={<TaskPage />} />
+          <Route path="/" element={<TaskPage />} />
         </Route>
       </TaskProvider>
     </AuthProvider>
